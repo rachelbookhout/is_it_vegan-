@@ -4,7 +4,7 @@ class CreateRecipe < ActiveRecord::Migration
        t.string :name
        t.integer :yummly_id
        t.string :image
-       t.text :ingrediants
+       t.text :ingredients
        t.text :instructions
        t.string :source
        t.timestamps

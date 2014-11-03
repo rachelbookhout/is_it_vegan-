@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20141103004311) do
     t.string   "name"
     t.integer  "yummly_id"
     t.string   "image"
-    t.text     "ingrediants"
+    t.text     "ingredients"
     t.text     "instructions"
     t.string   "source"
     t.datetime "created_at"
