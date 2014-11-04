@@ -1,11 +1,12 @@
 class RecipesController < ApplicationController
+  require 'json'
   def index
-    #search
-    #@recipes
-#     require 'net/http'
-#     results = Net::HTTP.get("http://api.yummly.com/v1/api/recipes?_app_id=ENV["YUMMLY_APPLICATION_ID"]&_app_key=ENV["YUMMLY_APPLICATION_KEY"]&q=#{search}
-# ")
-#     @recipes = results.parse
+    @search = params[:search]
+    if @search
+      binding.pry
+      @recipes = Yummly.search(params[:search])
+      binding.pry
+    end
   end
 
   def show

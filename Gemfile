@@ -40,3 +40,4 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'dotenv'
 gem 'yummly'
+gem 'pry-rails'

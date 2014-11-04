@@ -1,1 +1,22 @@
-Hi you
+<%= form_tag recipes_path, :method => 'get' do %>
+  <p>
+  <%= text_field_tag :search, params[:search], placeholder: "Is It Vegan?" %>
+  <%= submit_tag 'Search', :name => nil %>
+  </p>
+<%end%>
+<ul>
+<%if @search%>
+
+<% @recipes.each do |recipe| %>
+  <li><h1><%= recipe.name %></h1></li>
+  <ol>
+  <%recipe.ingredients.each do |ing| %>
+    <li><%= ing %></li>
+  <%end%>
+  </ol>
+<%end%>
+</ul>
+
+<%end%>
+
+
