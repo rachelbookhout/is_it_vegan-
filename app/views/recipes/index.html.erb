@@ -9,6 +9,10 @@
 
   <%binding.pry%>
 
+<%@results.each do |result|%>
+  <%= result %>
+  <%end%>
+
 <% @recipes.each do |recipe| %>
   <li><h1><%= recipe.name %></h1></li>
   <ol>

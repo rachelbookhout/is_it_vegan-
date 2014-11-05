@@ -38,6 +38,6 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'devise'
-gem 'dotenv'
+gem 'dotenv-rails', :groups => [:development, :test]
 gem 'yummly'
 gem 'pry-rails'
