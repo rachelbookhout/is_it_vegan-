@@ -7,9 +7,12 @@
 <ul>
 <%if @search%>
 
+  <%binding.pry%>
+
 <% @recipes.each do |recipe| %>
   <li><h1><%= recipe.name %></h1></li>
   <ol>
+  <%binding.pry%>
   <%recipe.ingredients.each do |ing| %>
     <li><%= ing %></li>
   <%end%>
