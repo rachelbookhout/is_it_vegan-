@@ -12,6 +12,7 @@ class RecipesController < ApplicationController
       encoded_url = URI.encode(url)
       uri = URI("#{encoded_url}")
       @results =  Net::HTTP.get(uri)
+      @results = JSON.parse(@results)
   end
   end
 
