@@ -9,21 +9,10 @@
 
 
 <%@results.each do |result|%>
-  <%binding.pry%>
-  <%= result %>
+  <h1><%= result["recipeName"] %></h1>
+  <p><%= result["ingredients"].join(', ')%>
+  <img src = "<%=result["imageUrlsBySize"]["90"]%>"></p>
   <%end%>
 
-<% @recipes.each do |recipe| %>
-  <li><h1><%= recipe.name %></h1></li>
-  <ol>
-  <%binding.pry%>
-  <%recipe.ingredients.each do |ing| %>
-    <li><%= ing %></li>
-  <%end%>
-  </ol>
-<%end%>
-</ul>
-
-<%end%>
 
 

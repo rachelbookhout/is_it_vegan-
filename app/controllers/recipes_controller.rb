@@ -13,6 +13,7 @@ class RecipesController < ApplicationController
       uri = URI("#{encoded_url}")
       @results =  Net::HTTP.get(uri)
       @results = JSON.parse(@results)
+      @results = @results["matches"][0..9]
   end
   end
 
